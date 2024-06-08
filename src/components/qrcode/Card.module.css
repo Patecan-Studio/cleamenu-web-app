@@ -1,0 +1,40 @@
+/* components/Card.module.css */
+.card {
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.qrWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-code-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 70px; /* Adjust to avoid overlapping with QR code */
+}
+
+.text {
+    font-size: 14px;
+    color: #666666;
+    margin-top: 20px; /* Ensure there is some space between the heading and text */
+}
