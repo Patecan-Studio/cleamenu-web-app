@@ -6,7 +6,8 @@ import axios from "axios";
 export async function GET() {
 
     const headers = {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-store'
     };
 
     const storeId = '66499d09b313248178294db5';
