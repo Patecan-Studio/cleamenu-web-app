@@ -20,7 +20,7 @@ export default function RootLayout({
         <html lang="en">
         <body>
         <Providers>
-            <TopNav/>
+            {/*<TopNav/>*/}
             <main className="container mx-auto p-10">
                 {children}
             </main>
