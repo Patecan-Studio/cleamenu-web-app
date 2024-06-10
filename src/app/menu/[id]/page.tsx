@@ -13,7 +13,11 @@ import QRCard from "@/components/qrcode/QRCard";
 
 
 const fetchMenu = async (): Promise<any[]> => {
-    const res = await fetch('/api/menu');
+    const res = await fetch('/api/menu', {
+        headers: {
+            'Cache-Control': 'no-cache'
+        }
+    });
     if (!res.ok) {
         throw new Error('Failed to fetch menu');
     }
@@ -41,7 +45,6 @@ export default function Home() {
     useEffect(() => {
         loadData().then(r => console.log("Fetched Menu Data!!!"));
     }, []);
-
 
 
     return (
