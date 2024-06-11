@@ -1,10 +1,10 @@
 // app/api/menu/route.ts
 
-import {NextResponse} from 'next/server';
-import axios from "axios";
+// pages/api/store.js
+
+import { NextResponse } from 'next/server';
 
 export async function GET() {
-
     const headers = {
         'Content-Type': 'application/json',
         'Cache-Control': 'no-store'
@@ -13,15 +13,21 @@ export async function GET() {
     const storeId = '66499d09b313248178294db5';
     const url = `${process.env.CLEAMENU_URL}/stores/${storeId}`;
 
-    const result = await axios.get(url, {headers})
-        .then(response => {
-            console.log('Store data:', response.data);
-            return response.data;
-        })
-        .catch(error => {
-            console.error('Error fetching store data:', error);
+    try {
+        const res = await fetch(url, {
+            next: { revalidate: 0 },
+            cache: 'no-store'
         });
 
-    const menu = result;
-    return NextResponse.json(menu);
+        if (!res.ok) {
+            throw new Error('Failed to fetch store data');
+        }
+
+        const data = await res.json();
+        console.log('Store data:', data);
+        return NextResponse.json(data);
+    } catch (error) {
+        console.error('Error fetching store data:', error);
+        return NextResponse.json({ error: 'Failed to fetch store data' }, { status: 500 });
+    }
 }
