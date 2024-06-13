@@ -1,5 +1,5 @@
 // components/Card.js
-import React, {useState} from 'react';
+import React from 'react';
 import QRCodeComponent from './QRCodeComponent';
 import styles from './Card.module.css';
 
@@ -10,15 +10,16 @@ const Card = () => {
         setIsActive(!isActive);
     };
     return (
+
         <div
             className={`${styles.card} ${isActive ? styles.active : ''}`}
             onClick={handleClick}
         >
             <div className={styles.qrWrapper}>
-                <QRCodeComponent value="https://www.example.com"/>
+
             </div>
-            <h2 className={styles.heading}>Xin cảm ơn quý khách</h2>
-            <p className={styles.text}>Quét mã QR để thanh toán chuyển khoản</p>
+            <h2 className={styles.heading}>Đánh giá nhanh</h2>
+            <p className={styles.text}>Trên Google Business Review</p>
         </div>
     );
 };

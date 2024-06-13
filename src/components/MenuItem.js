@@ -24,7 +24,7 @@ const MenuItem = ({ item }) => {
     }, []);
 
     return (
-        <article className='menu-item'>
+        <article className={`menu-item ${item.isOutOfStock ? 'out-of-stock' : ''}`}>
             {imageUrl ? <Image src={imageUrl} alt={name} className='photo' width={90} height={90} /> : <p>Loading image...</p>}
             <div className="item-info">
                 <header>
@@ -33,8 +33,10 @@ const MenuItem = ({ item }) => {
                 </header>
                 <p className='item-desc'>Món {name} tỏa hương thơm ngào ngạt, ngon tuyệt vời, hấp dẫn mọi giác quan.</p>
             </div>
+            {item.isOutOfStock && <div className="out-of-stock-label">đang hết hàng</div>}
         </article>
     );
+
 }
 
 export default MenuItem;

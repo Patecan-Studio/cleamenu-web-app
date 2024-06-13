@@ -12,6 +12,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer; /* Add cursor pointer for indicating clickability */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for smooth animation */
+    max-width: 100%; /* Ensure the card can take full width if needed */
+}
+
+.card.active {
+    transform: scale(0.75) translate(-50%, -50%); /* Zoom to 75% of screen size */
+    position: fixed; /* Fix the position for zooming effect */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    z-index: 1000; /* Ensure it's on top of other content */
+    width: 75vw; /* Set width to 75% of viewport width */
+    height: 75vh; /* Set height to 75% of viewport height */
+    max-width: none; /* Remove max-width to allow full width in zoomed state */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Larger shadow when active */
 }
 
 .qrWrapper {
@@ -25,6 +40,7 @@
     justify-content: center;
     align-items: center;
 }
+
 
 .heading {
     font-size: 18px;

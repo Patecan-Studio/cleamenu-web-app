@@ -278,3 +278,203 @@ MenuBody
         height: 150px;
     }
 }
+
+
+.out-of-stock {
+    position: relative;
+    background: var(--clr-grey-8); /* light grey background */
+    color: var(--clr-grey-3); /* darker grey text */
+}
+
+.out-of-stock .photo {
+    opacity: 0.7; /* semi-transparent image */
+}
+
+.out-of-stock .out-of-stock-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--clr-red-dark);
+    color: var(--clr-white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    transform: translate(-10%, -10%);
+}
+
+.out-of-stock .item-info header h4 {
+    color: var(--clr-grey-3); /* darker grey text */
+}
+
+@media screen and (min-width: 768px) {
+    .out-of-stock .out-of-stock-label {
+        font-size: 1rem;
+    }
+}
+
+.menu-item {
+    position: relative; /* Ensure the parent has position relative */
+}
+
+.note-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--clr-primary-5);
+    color: var(--clr-white);
+    border: none;
+    padding: 0.375rem 0.75rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: var(--radius);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+}
+
+.note-btn:hover {
+    background: var(--clr-primary-3);
+}
+
+/* Other existing styles */
+
+.out-of-stock {
+    position: relative;
+    background: var(--clr-grey-7); /* light grey background */
+    color: var(--clr-grey-3); /* darker grey text */
+}
+
+.out-of-stock .photo {
+    opacity: 0.5; /* semi-transparent image */
+}
+
+.out-of-stock .out-of-stock-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--clr-red-dark);
+    color: var(--clr-white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    transform: translate(-10%, -10%);
+}
+
+.out-of-stock .item-info header h4 {
+    color: var(--clr-grey-3); /* darker grey text */
+}
+
+@media screen and (min-width: 768px) {
+    .out-of-stock .out-of-stock-label {
+        font-size: 1rem;
+    }
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.modal-content {
+    background: var(--clr-white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow */
+    position: relative;
+    width: 75%; /* Set width to 75% of the screen */
+    height: 75%; /* Set width to 75% of the screen */
+    text-align: center;
+    border-radius: 20px; /* Add 20px border */
+}
+.modal-img {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Other existing styles */
+
+.menu-item {
+    position: relative; /* Ensure the parent has position relative */
+}
+
+.note-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--clr-primary-5);
+    color: var(--clr-white);
+    border: none;
+    padding: 0.375rem 0.75rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: var(--radius);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+}
+
+.note-btn:hover {
+    background: var(--clr-primary-3);
+}
+
+.out-of-stock {
+    position: relative;
+    background: var(--clr-grey-7); /* light grey background */
+    color: var(--clr-grey-3); /* darker grey text */
+}
+
+.out-of-stock .photo {
+    opacity: 0.5; /* semi-transparent image */
+}
+
+.out-of-stock .out-of-stock-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--clr-red-dark);
+    color: var(--clr-white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    transform: translate(-10%, -10%);
+}
+
+.out-of-stock .item-info header h4 {
+    color: var(--clr-grey-3); /* darker grey text */
+}
+
+@media screen and (min-width: 768px) {
+    .out-of-stock .out-of-stock-label {
+        font-size: 1rem;
+    }
+}
+
