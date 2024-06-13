@@ -25,7 +25,7 @@ const MenuItem = ({ item }) => {
 
     return (
         <article className='menu-item'>
-            {imageUrl ? <Image src={imageUrl} alt={name} className='photo' width={100} height={100} /> : <p>Loading image...</p>}
+            {imageUrl ? <Image src={imageUrl} alt={name} className='photo' width={90} height={90} /> : <p>Loading image...</p>}
             <div className="item-info">
                 <header>
                     <h4>{name}</h4>
